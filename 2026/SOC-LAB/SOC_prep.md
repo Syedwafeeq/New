@@ -1,4 +1,4 @@
-# Security Operations Center (SOC) — Complete Overview
+# Security Operations Center (SOC) - Complete Overview
 
 > **A comprehensive, technical, and portfolio-quality handbook for SOC analysts, blue team practitioners, and cybersecurity learners.**
 
@@ -6,11 +6,11 @@
 
 ### What is a SOC?
 
-A **Security Operations Center (SOC)** is a centralized facility — physical or virtual — where a team of cybersecurity professionals monitors, detects, analyzes, and responds to security threats and incidents across an organization's entire IT infrastructure on a 24×7 basis.
+A **Security Operations Center (SOC)** is a centralized facility - physical or virtual - where a team of cybersecurity professionals monitors, detects, analyzes, and responds to security threats and incidents across an organization's entire IT infrastructure on a 24×7 basis.
 
 The SOC acts as the **nerve center** of an organization's security posture, continuously ingesting data from endpoints, networks, cloud environments, applications, and identity systems to identify anomalous behavior and potential breaches before they cause significant damage.
 
-A SOC is not just a room with screens — it is a combination of **people, processes, and technology** working in concert:
+A SOC is not just a room with screens - it is a combination of **people, processes, and technology** working in concert:
 
 - **People**: Skilled analysts, incident responders, threat hunters, and security engineers
 - **Processes**: Defined workflows, playbooks, escalation paths, and SLAs
@@ -35,7 +35,7 @@ Modern organizations face an unprecedented volume and sophistication of cyber th
 - **Attack Surface Expansion**: Cloud, IoT, remote work, and SaaS have dramatically increased the number of systems that need monitoring.
 - **Dwell Time Reduction**: Without a SOC, the average attacker dwell time inside a network is over 200 days. A mature SOC compresses this to hours or days.
 - **Regulatory Compliance**: PCI-DSS, HIPAA, GDPR, ISO 27001, and SOC 2 mandate continuous security monitoring.
-- **Incident Velocity**: Modern attacks move fast — ransomware can encrypt a full domain within minutes. Only a 24×7 SOC can respond in time.
+- **Incident Velocity**: Modern attacks move fast - ransomware can encrypt a full domain within minutes. Only a 24×7 SOC can respond in time.
 - **Centralized Visibility**: Without centralized log aggregation and correlation, threats that span multiple systems go undetected.
 
 ### Evolution of SOC
@@ -77,7 +77,7 @@ Modern enterprises face a diverse and evolving threat landscape:
 
 ### Why Continuous Monitoring Matters
 
-Attacks do not follow business hours. The majority of significant breaches occur outside of standard working hours — over weekends, during holidays, and at night — precisely because attackers know that response capability is reduced.
+Attacks do not follow business hours. The majority of significant breaches occur outside of standard working hours - over weekends, during holidays, and at night - precisely because attackers know that response capability is reduced.
 
 Without continuous monitoring:
 - A **compromised endpoint** can communicate with a C2 server for weeks unnoticed
@@ -92,7 +92,7 @@ Continuous monitoring provides the ability to detect threats in near real-time a
 | Impact Category | Description | Example |
 |---|---|---|
 | Financial Loss | Direct costs of breach response, ransomware payments | Average breach cost: $4.45M (IBM 2023) |
-| Reputational Damage | Customer trust erosion | Target breach (2013) — stock fell 46% |
+| Reputational Damage | Customer trust erosion | Target breach (2013) - stock fell 46% |
 | Operational Disruption | Business continuity failure | Colonial Pipeline shutdown (2021) |
 | Legal and Regulatory Fines | Non-compliance penalties | GDPR fines up to 4% of global turnover |
 | Intellectual Property Theft | Loss of trade secrets | Nation-state espionage operations |
@@ -100,7 +100,7 @@ Continuous monitoring provides the ability to detect threats in near real-time a
 
 ### SOC Across Industries
 
-**Enterprise SOC**: Protects corporate IT assets — Active Directory, email, ERP systems, endpoints.
+**Enterprise SOC**: Protects corporate IT assets - Active Directory, email, ERP systems, endpoints.
 
 **Banking and Financial SOC**: Focuses on fraud detection, transaction monitoring, ATM network security, and regulatory compliance (PCI-DSS, SOX).
 
@@ -189,7 +189,7 @@ flowchart LR
 
 When an alert fires in the SIEM, Tier 1 analysts follow a structured triage methodology:
 
-1. **Alert Review**: Read the alert details — rule name, severity, affected asset, time, raw log.
+1. **Alert Review**: Read the alert details - rule name, severity, affected asset, time, raw log.
 2. **Context Enrichment**: Query threat intel for IP/hash/domain reputation. Pull surrounding logs.
 3. **Baseline Comparison**: Is this activity normal for this user/system? Compare to historical behavior.
 4. **Classification**: Determine true positive, false positive, or benign true positive.
@@ -433,7 +433,7 @@ graph TD
 
 **Purpose:** Automate repetitive SOC tasks and orchestrate multi-tool response workflows.
 
-**How it works:** Playbooks define step-by-step automated workflows triggered by SIEM alerts. Actions include enrichment, notification, containment, and ticketing — all without analyst intervention.
+**How it works:** Playbooks define step-by-step automated workflows triggered by SIEM alerts. Actions include enrichment, notification, containment, and ticketing - all without analyst intervention.
 
 **Example Playbook:**
 ```
@@ -450,7 +450,7 @@ Steps:
 **Advantages:**
 - Dramatically reduces Mean Time to Respond (MTTR)
 - Reduces analyst burnout by automating repetitive tasks
-- Consistent response quality — no human error
+- Consistent response quality - no human error
 - Scales incident response without additional headcount
 
 **Limitations:**
@@ -464,7 +464,7 @@ Steps:
 
 **Purpose:** Monitor endpoint activity in real-time, detect malicious behavior, and enable remote investigation and response.
 
-**How it works:** A lightweight agent on each endpoint collects telemetry — process creation, file operations, network connections, registry modifications, and memory activity — and sends it to a central platform for analysis using behavioral rules and ML models.
+**How it works:** A lightweight agent on each endpoint collects telemetry - process creation, file operations, network connections, registry modifications, and memory activity - and sends it to a central platform for analysis using behavioral rules and ML models.
 
 **Key Capabilities:**
 - Real-time process tree visualization
@@ -475,7 +475,7 @@ Steps:
 
 **Examples:** CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne, Carbon Black
 
-**Real-world Use Case:** An analyst receives an EDR alert showing `cmd.exe` spawned by `winword.exe` — a classic macro-enabled document execution chain. The analyst reviews the process tree, sees a suspicious PowerShell download cradle, and isolates the endpoint before lateral movement occurs.
+**Real-world Use Case:** An analyst receives an EDR alert showing `cmd.exe` spawned by `winword.exe` - a classic macro-enabled document execution chain. The analyst reviews the process tree, sees a suspicious PowerShell download cradle, and isolates the endpoint before lateral movement occurs.
 
 ---
 
@@ -511,7 +511,7 @@ Steps:
 - **Anomaly-based**: Detects deviations from baseline behavior (catches unknowns, higher false positives)
 - **Stateful protocol analysis**: Tracks protocol states to detect protocol violations
 
-**Limitations:** IDS only alerts — it does not block.
+**Limitations:** IDS only alerts - it does not block.
 
 ---
 
@@ -663,9 +663,9 @@ index=windows EventCode=4688
 ```
 
 **Splunk Apps of Note:**
-- Splunk Enterprise Security (ES) — full SIEM
-- Splunk SOAR — automated response
-- Splunk Attack Analyzer — malware and phishing analysis
+- Splunk Enterprise Security (ES) - full SIEM
+- Splunk SOAR - automated response
+- Splunk Attack Analyzer - malware and phishing analysis
 
 ---
 
@@ -714,14 +714,14 @@ event_simpleName=ProcessRollup2
 **Purpose:** Network analysis framework that generates rich, structured network metadata logs rather than just alerting on signatures.
 
 **Logs Produced:**
-- `conn.log` — all TCP/UDP/ICMP connections
-- `dns.log` — DNS queries and responses
-- `http.log` — HTTP request/response metadata
-- `ssl.log` — TLS handshake information
-- `files.log` — files transferred over the network
-- `weird.log` — protocol anomalies
+- `conn.log` - all TCP/UDP/ICMP connections
+- `dns.log` - DNS queries and responses
+- `http.log` - HTTP request/response metadata
+- `ssl.log` - TLS handshake information
+- `files.log` - files transferred over the network
+- `weird.log` - protocol anomalies
 
-**Real-world Use Case:** Zeek can detect long DNS tunneling sessions by analyzing query frequency, query length, and response data volume — patterns invisible to signature-only IDS.
+**Real-world Use Case:** Zeek can detect long DNS tunneling sessions by analyzing query frequency, query length, and response data volume - patterns invisible to signature-only IDS.
 
 ---
 
@@ -768,7 +768,7 @@ Logs answer the fundamental forensic questions: **Who did what, when, from where
 | Cloud Logs | AWS CloudTrail, Azure Activity | API calls, Resource access, IAM events |
 | Sysmon Logs | Windows with Sysmon | Process, network, registry, file events |
 
-### Windows Event Log — Key Event IDs
+### Windows Event Log - Key Event IDs
 
 | Event ID | Description | Security Relevance |
 |---|---|---|
@@ -785,7 +785,7 @@ Logs answer the fundamental forensic questions: **Who did what, when, from where
 | 4776 | NTLM authentication | Pass-the-hash |
 | 7045 | New service installed | Malware persistence |
 
-### Linux Logs — Key Files
+### Linux Logs - Key Files
 
 | Log File | Contents |
 |---|---|
@@ -856,7 +856,7 @@ IOAs focus on attacker **behavior** rather than static artifacts. They catch att
 
 ### Alert Fatigue
 
-Alert fatigue occurs when analysts are overwhelmed by high volumes of alerts — particularly false positives — leading to:
+Alert fatigue occurs when analysts are overwhelmed by high volumes of alerts - particularly false positives - leading to:
 - Desensitization (ignoring alerts)
 - Missed genuine incidents
 - Analyst burnout and turnover
@@ -882,7 +882,7 @@ THEN alert: "Successful Brute Force Attack"
 
 ### File Integrity Monitoring (FIM)
 
-FIM monitors critical system files and directories for unauthorized changes — a key detection control for malware persistence, rootkits, and insider threats.
+FIM monitors critical system files and directories for unauthorized changes - a key detection control for malware persistence, rootkits, and insider threats.
 
 **Key monitored paths:**
 - `/etc/passwd`, `/etc/shadow` (Linux)
@@ -1150,7 +1150,7 @@ Long-term containment:
 
 Threat hunting is a proactive, human-led process of iteratively searching through datasets to detect and isolate advanced threats that evade automated detection systems. It is based on the assumption that adversaries may already be present in the environment and the goal is to find them before they cause damage.
 
-Threat hunting is distinct from alert investigation — it is driven by hypotheses, not alerts.
+Threat hunting is distinct from alert investigation - it is driven by hypotheses, not alerts.
 
 ### Hypothesis-Driven Hunting
 
@@ -1232,7 +1232,7 @@ CommandLine="*certutil*" AND (CommandLine="*-urlcache*" OR CommandLine="*-decode
 Timeline analysis reconstructs the sequence of events during an incident using timestamps from multiple sources.
 
 **Timeline Sources:**
-- File system timestamps (Created, Modified, Accessed, MFT Changed — MACB)
+- File system timestamps (Created, Modified, Accessed, MFT Changed - MACB)
 - Windows Event Log timestamps
 - Prefetch execution times
 - Browser history timestamps
@@ -1269,17 +1269,17 @@ psort.py -o l2tcsv evidence.plaso "date > '2025-01-15 00:00:00' AND date < '2025
 
 | Priority | Description | MTTD Target | MTTR Target |
 |---|---|---|---|
-| P1 — Critical | Active breach, ransomware, data exfiltration | 15 min | 1 hour |
-| P2 — High | Compromised account, malware active | 30 min | 4 hours |
-| P3 — Medium | Suspicious activity, policy violation | 2 hours | 24 hours |
-| P4 — Low | Minor anomaly, informational | 8 hours | 72 hours |
+| P1 - Critical | Active breach, ransomware, data exfiltration | 15 min | 1 hour |
+| P2 - High | Compromised account, malware active | 30 min | 4 hours |
+| P3 - Medium | Suspicious activity, policy violation | 2 hours | 24 hours |
+| P4 - Low | Minor anomaly, informational | 8 hours | 72 hours |
 
 ---
 
 ## 12. SOC Challenges
 
 ### Alert Fatigue
-Analysts receive hundreds to thousands of alerts per shift. High false positive rates — sometimes exceeding 80% — cause analysts to become desensitized and miss genuine incidents. This is the #1 operational challenge in most SOCs.
+Analysts receive hundreds to thousands of alerts per shift. High false positive rates - sometimes exceeding 80% - cause analysts to become desensitized and miss genuine incidents. This is the #1 operational challenge in most SOCs.
 
 **Solution:** SOAR automation, UEBA, risk-based alerting, regular rule tuning.
 
@@ -1352,7 +1352,7 @@ Zero Trust assumes no user or system is inherently trusted, even inside the netw
 - Every authentication event requires validation
 - Lateral movement is significantly harder (microsegmentation)
 - All traffic is encrypted and inspected
-- Identity becomes the new perimeter — monitor it closely
+- Identity becomes the new perimeter - monitor it closely
 
 ### Purple Teaming
 
@@ -1468,46 +1468,46 @@ Alert: Mimikatz detected on CORP-WKS-001
 
 | Term | Definition |
 |---|---|
-| ACL | Access Control List — rules defining permitted network traffic |
+| ACL | Access Control List - rules defining permitted network traffic |
 | Active Response | Automated defensive actions by Wazuh in response to alerts |
-| AD | Active Directory — Microsoft's identity and access management system |
+| AD | Active Directory - Microsoft's identity and access management system |
 | Alert Fatigue | Analyst desensitization due to high volume of low-quality alerts |
-| APT | Advanced Persistent Threat — sophisticated, long-duration attacker |
-| AQL | Ariel Query Language — QRadar's search language |
-| ATT&CK | Adversarial Tactics, Techniques, and Common Knowledge — MITRE framework |
+| APT | Advanced Persistent Threat - sophisticated, long-duration attacker |
+| AQL | Ariel Query Language - QRadar's search language |
+| ATT&CK | Adversarial Tactics, Techniques, and Common Knowledge - MITRE framework |
 | Authentication Log | Records of login attempts and outcomes |
 | Beacon | Periodic C2 check-in by malware implant |
-| BEC | Business Email Compromise — fraud via email impersonation |
-| BYOD | Bring Your Own Device — personal devices on corporate networks |
-| C2 / C&C | Command and Control — attacker infrastructure for managing malware |
+| BEC | Business Email Compromise - fraud via email impersonation |
+| BYOD | Bring Your Own Device - personal devices on corporate networks |
+| C2 / C&C | Command and Control - attacker infrastructure for managing malware |
 | Chain of Custody | Documentation trail ensuring evidence integrity |
 | CERT | Computer Emergency Response Team |
 | CSIRT | Computer Security Incident Response Team |
-| CVE | Common Vulnerabilities and Exposures — standardized vulnerability IDs |
-| CVSS | Common Vulnerability Scoring System — severity scoring |
-| DLP | Data Loss Prevention — tools that prevent unauthorized data transfer |
+| CVE | Common Vulnerabilities and Exposures - standardized vulnerability IDs |
+| CVSS | Common Vulnerability Scoring System - severity scoring |
+| DLP | Data Loss Prevention - tools that prevent unauthorized data transfer |
 | DNS Tunneling | Encoding C2 traffic within DNS queries to bypass firewalls |
 | EDR | Endpoint Detection and Response |
-| ELK | Elasticsearch, Logstash, Kibana — open-source log stack |
+| ELK | Elasticsearch, Logstash, Kibana - open-source log stack |
 | Event Log | Windows system log recording security-relevant events |
 | Exfiltration | Unauthorized transfer of data from a network |
-| FIM | File Integrity Monitoring — detecting unauthorized file changes |
-| FP | False Positive — benign activity incorrectly flagged as malicious |
+| FIM | File Integrity Monitoring - detecting unauthorized file changes |
+| FP | False Positive - benign activity incorrectly flagged as malicious |
 | GDPR | General Data Protection Regulation |
 | HIDS | Host Intrusion Detection System |
 | HIPAA | Health Insurance Portability and Accountability Act |
 | Honeypot | Decoy system designed to lure and detect attackers |
 | IDS | Intrusion Detection System |
-| IOA | Indicator of Attack — behavioral evidence of attack activity |
-| IOC | Indicator of Compromise — static evidence of compromise |
+| IOA | Indicator of Attack - behavioral evidence of attack activity |
+| IOC | Indicator of Compromise - static evidence of compromise |
 | IPS | Intrusion Prevention System |
 | IR | Incident Response |
-| KQL | Kusto Query Language — used in Azure Sentinel and Elastic |
+| KQL | Kusto Query Language - used in Azure Sentinel and Elastic |
 | Lateral Movement | Attacker pivoting through network post-initial access |
-| LOLBIN | Living-Off-the-Land Binary — legitimate tools abused by attackers |
-| LSASS | Local Security Authority Subsystem — Windows process holding credentials |
+| LOLBIN | Living-Off-the-Land Binary - legitimate tools abused by attackers |
+| LSASS | Local Security Authority Subsystem - Windows process holding credentials |
 | Malware | Malicious software designed to damage or gain unauthorized access |
-| MD5 | Message Digest 5 — cryptographic hash function (used for IOC matching) |
+| MD5 | Message Digest 5 - cryptographic hash function (used for IOC matching) |
 | MISP | Malware Information Sharing Platform |
 | MITRE | Research organization maintaining the ATT&CK framework |
 | MTTD | Mean Time to Detect |
@@ -1516,11 +1516,11 @@ Alert: Mimikatz detected on CORP-WKS-001
 | NIDS | Network Intrusion Detection System |
 | NIST | National Institute of Standards and Technology |
 | NOC | Network Operations Center |
-| NTLM | NT LAN Manager — Windows authentication protocol |
+| NTLM | NT LAN Manager - Windows authentication protocol |
 | OSQuery | SQL-based endpoint visibility tool |
 | OSINT | Open Source Intelligence |
 | Pass-the-Hash | Using stolen NTLM hash to authenticate without knowing the password |
-| PCAP | Packet Capture — raw network traffic recording |
+| PCAP | Packet Capture - raw network traffic recording |
 | PCI-DSS | Payment Card Industry Data Security Standard |
 | Persistence | Techniques attackers use to maintain access after reboot |
 | Phishing | Fraudulent email designed to steal credentials or deploy malware |
@@ -1533,7 +1533,7 @@ Alert: Mimikatz detected on CORP-WKS-001
 | Proxy Log | Records of web proxy requests (URLs, users, responses) |
 | Ransomware | Malware that encrypts files and demands ransom |
 | Reconnaissance | Information gathering phase of an attack |
-| Registry | Windows configuration database — common persistence location |
+| Registry | Windows configuration database - common persistence location |
 | Rootkit | Malware that hides its presence at kernel level |
 | SIEM | Security Information and Event Management |
 | SLA | Service Level Agreement |
@@ -1542,23 +1542,23 @@ Alert: Mimikatz detected on CORP-WKS-001
 | SOC 2 | Service Organization Control framework |
 | Sigma | Generic SIEM rule format |
 | Spear Phishing | Targeted phishing against a specific individual |
-| SPL | Search Processing Language — Splunk's query language |
-| STIX | Structured Threat Information Expression — threat intel format |
+| SPL | Search Processing Language - Splunk's query language |
+| STIX | Structured Threat Information Expression - threat intel format |
 | Sysmon | Windows system monitoring tool by Sysinternals |
-| TAXII | Trusted Automated Exchange of Intelligence Information — threat sharing protocol |
+| TAXII | Trusted Automated Exchange of Intelligence Information - threat sharing protocol |
 | Threat Hunting | Proactive search for hidden threats |
 | Threat Intelligence | Contextualized information about current threats |
 | TIP | Threat Intelligence Platform |
-| TOR | The Onion Router — anonymization network |
+| TOR | The Onion Router - anonymization network |
 | TTP | Tactics, Techniques, and Procedures |
-| TP | True Positive — genuine malicious activity correctly identified |
-| UAC | User Account Control — Windows privilege management |
+| TP | True Positive - genuine malicious activity correctly identified |
+| UAC | User Account Control - Windows privilege management |
 | UEBA | User and Entity Behavior Analytics |
 | VPN | Virtual Private Network |
 | Volatility | Open-source memory forensics framework |
 | Vulnerability | Weakness that can be exploited by an attacker |
 | Wazuh | Open-source SIEM, HIDS, and XDR platform |
-| WMI | Windows Management Instrumentation — often abused for execution |
+| WMI | Windows Management Instrumentation - often abused for execution |
 | XDR | Extended Detection and Response |
 | YARA | Pattern matching language for malware identification |
 | Zeek | Network analysis framework |
@@ -1602,7 +1602,7 @@ An IOC (Indicator of Compromise) is an artifact that provides evidence a system 
 
 **Q6: Walk me through how you would investigate a potential brute force attack.**
 
-1. Review the initial alert — confirm high volume of EventID 4625 from a single source IP
+1. Review the initial alert - confirm high volume of EventID 4625 from a single source IP
 2. Query the SIEM for the full scope: How many accounts targeted? How long did it last? Did any succeed (EventID 4624)?
 3. Check if the source IP is internal (infected machine) or external
 4. Look up the source IP in threat intel (VirusTotal, AbuseIPDB)
@@ -1617,7 +1617,7 @@ EventID **4728** (A member was added to a security-enabled global group) and **4
 
 **Q8: Explain the difference between IOC and IOA.**
 
-IOCs are static artifacts — hashes, IPs, domains — that confirm compromise has occurred. They are retroactive and easily evaded by attackers who change infrastructure. IOAs focus on attacker behavior — the techniques and patterns of an attack — regardless of which specific tools are used. IOAs detect attack activity in progress rather than confirming past compromise, making them more resistant to evasion.
+IOCs are static artifacts - hashes, IPs, domains - that confirm compromise has occurred. They are retroactive and easily evaded by attackers who change infrastructure. IOAs focus on attacker behavior - the techniques and patterns of an attack - regardless of which specific tools are used. IOAs detect attack activity in progress rather than confirming past compromise, making them more resistant to evasion.
 
 **Q9: What is a Sigma rule and why is it useful?**
 
@@ -1641,7 +1641,7 @@ Key detection signals for lateral movement:
 
 Kerberoasting involves requesting Kerberos service tickets (TGS) for service accounts and cracking them offline. Detection:
 - Monitor EventID **4769** (Kerberos Service Ticket Requested) for:
-  - `TicketEncryptionType = 0x17` (RC4-HMAC — weaker, preferred by attackers)
+  - `TicketEncryptionType = 0x17` (RC4-HMAC - weaker, preferred by attackers)
   - High volume of TGS requests from a single account in short timeframe
   - Requests for service accounts with SPNs that don't normally get authenticated
 - SIEM rule: `EventID 4769 AND TicketEncType = "0x17" AND count > 5 within 1 minute`
@@ -1653,8 +1653,8 @@ Process injection involves inserting malicious code into the address space of a 
 Common techniques: DLL injection, process hollowing, reflective DLL injection, APC injection.
 
 Detection:
-- Sysmon Event ID 8 (CreateRemoteThread) — cross-process thread creation
-- Sysmon Event ID 10 (ProcessAccess) — unexpected process access to other processes
+- Sysmon Event ID 8 (CreateRemoteThread) - cross-process thread creation
+- Sysmon Event ID 10 (ProcessAccess) - unexpected process access to other processes
 - EDR: Memory scanning for executable code in non-executable memory regions
 - Unusual network connections from normally non-network-active processes
 
@@ -1679,8 +1679,8 @@ Detection is challenging because the tickets appear valid. Indicators:
 This is a strong indicator of DNS tunneling or a DGA (Domain Generation Algorithm) used by malware C2.
 
 1. Isolate the workstation immediately to prevent further C2 communication
-2. Pull the DNS logs — note the domain, subdomain patterns, query frequency, data volume
-3. Look up the base domain in threat intel — is it known malware infrastructure?
+2. Pull the DNS logs - note the domain, subdomain patterns, query frequency, data volume
+3. Look up the base domain in threat intel - is it known malware infrastructure?
 4. Query the SIEM: Any other workstations querying the same domain?
 5. Examine the workstation: What process is generating the DNS queries? (Sysmon Event 22 or netstat)
 6. Capture a memory image before touching the system further
@@ -1707,11 +1707,11 @@ This is a strong indicator of DNS tunneling or a DGA (Domain Generation Algorith
 2025-01-15 03:42:17 EventID=4625 SubStatus=0xC000006A Account=administrator Source=185.220.101.45
 ```
 
-This is a **failed logon attempt** (EventID 4625). SubStatus `0xC000006A` means incorrect password. The account targeted is the built-in Administrator account and the source IP `185.220.101.45` is a TOR exit node (known from threat intel). This indicates an **external brute force attack** against the Administrator account from TOR — a high-priority alert requiring immediate investigation and IP blocking.
+This is a **failed logon attempt** (EventID 4625). SubStatus `0xC000006A` means incorrect password. The account targeted is the built-in Administrator account and the source IP `185.220.101.45` is a TOR exit node (known from threat intel). This indicates an **external brute force attack** against the Administrator account from TOR - a high-priority alert requiring immediate investigation and IP blocking.
 
 **Q17: Explain the significance of Logon Type 3 in Windows Event ID 4624.**
 
-Logon Type 3 is a network logon — authentication over the network without interactive access (e.g., accessing a file share, using `net use`, PsExec). This is significant in SOC analysis because:
+Logon Type 3 is a network logon - authentication over the network without interactive access (e.g., accessing a file share, using `net use`, PsExec). This is significant in SOC analysis because:
 - Most lateral movement techniques produce Type 3 logons
 - Pass-the-Hash produces Type 3 logons with NTLM
 - Unusual Type 3 logons between workstations (not from servers) are suspicious
@@ -1739,7 +1739,7 @@ Logon Type 3 is a network logon — authentication over the network without inte
 3. Sysmon Event 1:
    Parent: cmd.exe (spawned from RDP session)
    Child: vssadmin.exe delete shadows /all /quiet
-   → Shadow copy deletion — ransomware pre-execution
+   → Shadow copy deletion - ransomware pre-execution
 
 4. Wazuh FIM Alert:
    500+ file modifications per second in D:\FileShare\
@@ -1763,7 +1763,7 @@ OR CommandLine="*wmic*shadowcopy*delete*"
 1. Isolate affected workstation immediately via EDR
 2. Identify all systems connected to the compromised file share
 3. Assess scope: which files were encrypted?
-4. Check backup integrity — are backups accessible?
+4. Check backup integrity - are backups accessible?
 5. Block C2 IP and ransomware IOCs across all controls
 6. Escalate to CISO, activate IR plan
 7. Engage legal and communications teams
@@ -1778,7 +1778,7 @@ OR CommandLine="*wmic*shadowcopy*delete*"
 **Indicators:**
 ```
 Firewall Logs:
-  Source IP: 45.33.32.156 (Shodan IP — known scanning host)
+  Source IP: 45.33.32.156 (Shodan IP - known scanning host)
   Destination: vpn.company.com:443
   Requests: 1,247 in 10 minutes
 
@@ -1837,7 +1837,7 @@ UEBA Alert:
 **Response Steps:**
 1. Block user's outbound internet access pending investigation
 2. Preserve proxy logs and DLP evidence (do not alert user)
-3. Engage HR and Legal — insider threat protocol
+3. Engage HR and Legal - insider threat protocol
 4. Forensically image the user's workstation
 5. Review all outbound transfers by this user for past 90 days
 6. Determine what specifically was exfiltrated
@@ -1923,7 +1923,7 @@ EventID 4624 (Logon Type 3):
   Destination: DC-01 (domain controller)
   Account: corp\john.doe
   Time: 2:47 AM (anomalous for this user)
-  LogonProcess: NtLmSsp (NTLM — unusual for DC authentication)
+  LogonProcess: NtLmSsp (NTLM - unusual for DC authentication)
 
 Sysmon Event 3 (on DC-01):
   Source IP: WKS-001 internal IP
